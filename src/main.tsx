@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
-
+import AdminEnrollmentsPage from "@/pages/admin/enrollments";
 import { ThemeProvider } from "@/components/theme-provider";
 import RootLayout from "@/layouts/root-layout";
 import HomePage from "@/pages/home";
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      // ขั้นตอนที่ 7-10: เพิ่ม route { path: "admin/enrollments", element: <AdminEnrollmentsPage /> }
+      { path: "admin/enrollments", element: <AdminEnrollmentsPage /> },
     ],
   },
 ]);
